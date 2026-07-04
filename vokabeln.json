@@ -1,0 +1,636 @@
+[
+  {
+    "id": 1,
+    "kategorie": "Grundlagen",
+    "it": "hello",
+    "de": "Hallo"
+  },
+  {
+    "id": 2,
+    "kategorie": "Grundlagen",
+    "it": "goodbye",
+    "de": "Auf Wiedersehen"
+  },
+  {
+    "id": 3,
+    "kategorie": "Grundlagen",
+    "it": "please",
+    "de": "bitte"
+  },
+  {
+    "id": 4,
+    "kategorie": "Grundlagen",
+    "it": "thank you",
+    "de": "danke"
+  },
+  {
+    "id": 5,
+    "kategorie": "Grundlagen",
+    "it": "you're welcome",
+    "de": "bitte (Antwort)"
+  },
+  {
+    "id": 6,
+    "kategorie": "Grundlagen",
+    "it": "yes",
+    "de": "ja"
+  },
+  {
+    "id": 7,
+    "kategorie": "Grundlagen",
+    "it": "no",
+    "de": "nein"
+  },
+  {
+    "id": 8,
+    "kategorie": "Grundlagen",
+    "it": "sorry",
+    "de": "Entschuldigung"
+  },
+  {
+    "id": 9,
+    "kategorie": "Grundlagen",
+    "it": "good morning",
+    "de": "Guten Morgen"
+  },
+  {
+    "id": 10,
+    "kategorie": "Grundlagen",
+    "it": "good evening",
+    "de": "Guten Abend"
+  },
+  {
+    "id": 11,
+    "kategorie": "Zahlen",
+    "it": "one",
+    "de": "eins"
+  },
+  {
+    "id": 12,
+    "kategorie": "Zahlen",
+    "it": "two",
+    "de": "zwei"
+  },
+  {
+    "id": 13,
+    "kategorie": "Zahlen",
+    "it": "three",
+    "de": "drei"
+  },
+  {
+    "id": 14,
+    "kategorie": "Zahlen",
+    "it": "four",
+    "de": "vier"
+  },
+  {
+    "id": 15,
+    "kategorie": "Zahlen",
+    "it": "five",
+    "de": "fünf"
+  },
+  {
+    "id": 16,
+    "kategorie": "Zahlen",
+    "it": "six",
+    "de": "sechs"
+  },
+  {
+    "id": 17,
+    "kategorie": "Zahlen",
+    "it": "seven",
+    "de": "sieben"
+  },
+  {
+    "id": 18,
+    "kategorie": "Zahlen",
+    "it": "eight",
+    "de": "acht"
+  },
+  {
+    "id": 19,
+    "kategorie": "Zahlen",
+    "it": "nine",
+    "de": "neun"
+  },
+  {
+    "id": 20,
+    "kategorie": "Zahlen",
+    "it": "ten",
+    "de": "zehn"
+  },
+  {
+    "id": 21,
+    "kategorie": "Farben",
+    "it": "red",
+    "de": "rot"
+  },
+  {
+    "id": 22,
+    "kategorie": "Farben",
+    "it": "blue",
+    "de": "blau"
+  },
+  {
+    "id": 23,
+    "kategorie": "Farben",
+    "it": "green",
+    "de": "grün"
+  },
+  {
+    "id": 24,
+    "kategorie": "Farben",
+    "it": "yellow",
+    "de": "gelb"
+  },
+  {
+    "id": 25,
+    "kategorie": "Farben",
+    "it": "black",
+    "de": "schwarz"
+  },
+  {
+    "id": 26,
+    "kategorie": "Farben",
+    "it": "white",
+    "de": "weiß"
+  },
+  {
+    "id": 27,
+    "kategorie": "Farben",
+    "it": "brown",
+    "de": "braun"
+  },
+  {
+    "id": 28,
+    "kategorie": "Farben",
+    "it": "purple",
+    "de": "lila"
+  },
+  {
+    "id": 29,
+    "kategorie": "Farben",
+    "it": "orange",
+    "de": "orange"
+  },
+  {
+    "id": 30,
+    "kategorie": "Farben",
+    "it": "pink",
+    "de": "rosa"
+  },
+  {
+    "id": 31,
+    "kategorie": "Familie",
+    "it": "mother",
+    "de": "Mutter"
+  },
+  {
+    "id": 32,
+    "kategorie": "Familie",
+    "it": "father",
+    "de": "Vater"
+  },
+  {
+    "id": 33,
+    "kategorie": "Familie",
+    "it": "brother",
+    "de": "Bruder"
+  },
+  {
+    "id": 34,
+    "kategorie": "Familie",
+    "it": "sister",
+    "de": "Schwester"
+  },
+  {
+    "id": 35,
+    "kategorie": "Familie",
+    "it": "son",
+    "de": "Sohn"
+  },
+  {
+    "id": 36,
+    "kategorie": "Familie",
+    "it": "daughter",
+    "de": "Tochter"
+  },
+  {
+    "id": 37,
+    "kategorie": "Familie",
+    "it": "grandfather",
+    "de": "Großvater"
+  },
+  {
+    "id": 38,
+    "kategorie": "Familie",
+    "it": "grandmother",
+    "de": "Großmutter"
+  },
+  {
+    "id": 39,
+    "kategorie": "Familie",
+    "it": "husband",
+    "de": "Ehemann"
+  },
+  {
+    "id": 40,
+    "kategorie": "Familie",
+    "it": "wife",
+    "de": "Ehefrau"
+  },
+  {
+    "id": 41,
+    "kategorie": "Essen",
+    "it": "bread",
+    "de": "Brot"
+  },
+  {
+    "id": 42,
+    "kategorie": "Essen",
+    "it": "water",
+    "de": "Wasser"
+  },
+  {
+    "id": 43,
+    "kategorie": "Essen",
+    "it": "wine",
+    "de": "Wein"
+  },
+  {
+    "id": 44,
+    "kategorie": "Essen",
+    "it": "pasta",
+    "de": "Nudeln"
+  },
+  {
+    "id": 45,
+    "kategorie": "Essen",
+    "it": "fish",
+    "de": "Fisch"
+  },
+  {
+    "id": 46,
+    "kategorie": "Essen",
+    "it": "meat",
+    "de": "Fleisch"
+  },
+  {
+    "id": 47,
+    "kategorie": "Essen",
+    "it": "cheese",
+    "de": "Käse"
+  },
+  {
+    "id": 48,
+    "kategorie": "Essen",
+    "it": "fruit",
+    "de": "Obst"
+  },
+  {
+    "id": 49,
+    "kategorie": "Essen",
+    "it": "vegetable",
+    "de": "Gemüse"
+  },
+  {
+    "id": 50,
+    "kategorie": "Essen",
+    "it": "sweet",
+    "de": "süß / nett / lieb / Nachspeise"
+  },
+  {
+    "id": 51,
+    "kategorie": "Zeit",
+    "it": "today",
+    "de": "heute"
+  },
+  {
+    "id": 52,
+    "kategorie": "Zeit",
+    "it": "tomorrow",
+    "de": "morgen"
+  },
+  {
+    "id": 53,
+    "kategorie": "Zeit",
+    "it": "yesterday",
+    "de": "gestern"
+  },
+  {
+    "id": 54,
+    "kategorie": "Zeit",
+    "it": "week",
+    "de": "Woche"
+  },
+  {
+    "id": 55,
+    "kategorie": "Zeit",
+    "it": "month",
+    "de": "Monat"
+  },
+  {
+    "id": 56,
+    "kategorie": "Zeit",
+    "it": "year",
+    "de": "Jahr"
+  },
+  {
+    "id": 57,
+    "kategorie": "Zeit",
+    "it": "hour",
+    "de": "Stunde"
+  },
+  {
+    "id": 58,
+    "kategorie": "Zeit",
+    "it": "minute",
+    "de": "Minute"
+  },
+  {
+    "id": 59,
+    "kategorie": "Verben",
+    "it": "be",
+    "de": "sein",
+    "formen": {
+      "base": "be",
+      "past": "was / were",
+      "participle": "been"
+    }
+  },
+  {
+    "id": 60,
+    "kategorie": "Verben",
+    "it": "have",
+    "de": "haben",
+    "formen": {
+      "base": "have",
+      "past": "had",
+      "participle": "had"
+    }
+  },
+  {
+    "id": 61,
+    "kategorie": "Verben",
+    "it": "go",
+    "de": "gehen",
+    "formen": {
+      "base": "go",
+      "past": "went",
+      "participle": "gone"
+    }
+  },
+  {
+    "id": 62,
+    "kategorie": "Verben",
+    "it": "do",
+    "de": "machen / tun",
+    "formen": {
+      "base": "do",
+      "past": "did",
+      "participle": "done"
+    }
+  },
+  {
+    "id": 63,
+    "kategorie": "Verben",
+    "it": "eat",
+    "de": "essen",
+    "formen": {
+      "base": "eat",
+      "past": "ate",
+      "participle": "eaten"
+    }
+  },
+  {
+    "id": 64,
+    "kategorie": "Verben",
+    "it": "drink",
+    "de": "trinken",
+    "formen": {
+      "base": "drink",
+      "past": "drank",
+      "participle": "drunk"
+    }
+  },
+  {
+    "id": 65,
+    "kategorie": "Verben",
+    "it": "see",
+    "de": "sehen",
+    "formen": {
+      "base": "see",
+      "past": "saw",
+      "participle": "seen"
+    }
+  },
+  {
+    "id": 66,
+    "kategorie": "Verben",
+    "it": "know",
+    "de": "wissen",
+    "formen": {
+      "base": "know",
+      "past": "knew",
+      "participle": "known"
+    }
+  },
+  {
+    "id": 67,
+    "kategorie": "Verben",
+    "it": "come",
+    "de": "kommen",
+    "formen": {
+      "base": "come",
+      "past": "came",
+      "participle": "come"
+    }
+  },
+  {
+    "id": 68,
+    "kategorie": "Verben",
+    "it": "take",
+    "de": "nehmen",
+    "formen": {
+      "base": "take",
+      "past": "took",
+      "participle": "taken"
+    }
+  },
+  {
+    "id": 69,
+    "kategorie": "Verben",
+    "it": "want",
+    "de": "wollen"
+  },
+  {
+    "id": 70,
+    "kategorie": "Verben",
+    "it": "need",
+    "de": "brauchen"
+  },
+  {
+    "id": 71,
+    "kategorie": "Verben",
+    "it": "like",
+    "de": "mögen"
+  },
+  {
+    "id": 72,
+    "kategorie": "Verben",
+    "it": "listen",
+    "de": "zuhören"
+  },
+  {
+    "id": 73,
+    "kategorie": "Personalpronomen",
+    "it": "I",
+    "de": "ich"
+  },
+  {
+    "id": 74,
+    "kategorie": "Personalpronomen",
+    "it": "you",
+    "de": "du"
+  },
+  {
+    "id": 75,
+    "kategorie": "Personalpronomen",
+    "it": "he",
+    "de": "er"
+  },
+  {
+    "id": 76,
+    "kategorie": "Personalpronomen",
+    "it": "she",
+    "de": "sie"
+  },
+  {
+    "id": 77,
+    "kategorie": "Personalpronomen",
+    "it": "we",
+    "de": "wir"
+  },
+  {
+    "id": 78,
+    "kategorie": "Personalpronomen",
+    "it": "you (plural)",
+    "de": "ihr"
+  },
+  {
+    "id": 79,
+    "kategorie": "Personalpronomen",
+    "it": "they",
+    "de": "sie (Plural)"
+  },
+  {
+    "id": 80,
+    "kategorie": "Unregelmäßige Verben",
+    "it": "say",
+    "de": "sagen",
+    "formen": {
+      "base": "say",
+      "past": "said",
+      "participle": "said"
+    }
+  },
+  {
+    "id": 81,
+    "kategorie": "Unregelmäßige Verben",
+    "it": "leave",
+    "de": "verlassen",
+    "formen": {
+      "base": "leave",
+      "past": "left",
+      "participle": "left"
+    }
+  },
+  {
+    "id": 82,
+    "kategorie": "Unregelmäßige Verben",
+    "it": "sit",
+    "de": "sitzen",
+    "formen": {
+      "base": "sit",
+      "past": "sat",
+      "participle": "sat"
+    }
+  },
+  {
+    "id": 83,
+    "kategorie": "Unregelmäßige Verben",
+    "it": "sleep",
+    "de": "schlafen",
+    "formen": {
+      "base": "sleep",
+      "past": "slept",
+      "participle": "slept"
+    }
+  },
+  {
+    "id": 84,
+    "kategorie": "Unregelmäßige Verben",
+    "it": "choose",
+    "de": "wählen",
+    "formen": {
+      "base": "choose",
+      "past": "chose",
+      "participle": "chosen"
+    }
+  },
+  {
+    "id": 85,
+    "kategorie": "Unregelmäßige Verben",
+    "it": "break",
+    "de": "kaputt machen",
+    "formen": {
+      "base": "break",
+      "past": "broke",
+      "participle": "broken"
+    }
+  },
+  {
+    "id": 86,
+    "kategorie": "Unregelmäßige Verben",
+    "it": "write",
+    "de": "schreiben",
+    "formen": {
+      "base": "write",
+      "past": "wrote",
+      "participle": "written"
+    }
+  },
+  {
+    "id": 87,
+    "kategorie": "Unregelmäßige Verben",
+    "it": "read",
+    "de": "lesen",
+    "formen": {
+      "base": "read",
+      "past": "read",
+      "participle": "read"
+    }
+  },
+  {
+    "id": 88,
+    "kategorie": "Unregelmäßige Verben",
+    "it": "run",
+    "de": "laufen",
+    "formen": {
+      "base": "run",
+      "past": "ran",
+      "participle": "run"
+    }
+  },
+  {
+    "id": 89,
+    "kategorie": "Unregelmäßige Verben",
+    "it": "begin",
+    "de": "beginnen",
+    "formen": {
+      "base": "begin",
+      "past": "began",
+      "participle": "begun"
+    }
+  }
+]
