@@ -1,0 +1,9 @@
+{
+  "name": "Spracheingabe-Test",
+  "short_name": "SpeechTest",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f0f2f6",
+  "theme_color": "#1e293b",
+  "icons": []
+}

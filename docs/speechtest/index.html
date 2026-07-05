@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Spracheingabe-Test</title>
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1e293b">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,'Segoe UI',sans-serif;background:#f0f2f6;color:#1e293b;padding:20px;padding-top:calc(20px + env(safe-area-inset-top))}
+h1{font-size:18px;margin-bottom:4px}
+.sub{font-size:12px;color:#64748b;margin-bottom:20px}
+.card{background:#fff;border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,0.08)}
+.status{font-size:14px;font-weight:700;padding:10px;border-radius:8px;margin-bottom:10px;text-align:center}
+.status.ok{background:#f0fdf4;color:#16a34a}
+.status.bad{background:#fef2f2;color:#dc2626}
+.status.info{background:#eff6ff;color:#1d4ed8}
+select{width:100%;padding:10px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:14px;margin-bottom:10px}
+button{width:100%;padding:16px;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;margin-bottom:8px}
+.btn-mic{background:#1e293b;color:#fff}
+.btn-mic.listening{background:#dc2626}
+.btn-mic:disabled{background:#cbd5e1;cursor:not-allowed}
+.transcript{min-height:60px;background:#f8fafc;border-radius:8px;padding:12px;font-size:18px;font-weight:600;margin-top:10px}
+.log{font-size:11px;color:#64748b;font-family:monospace;white-space:pre-wrap;background:#f8fafc;padding:10px;border-radius:8px;max-height:200px;overflow-y:auto;margin-top:10px}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 8px;border-radius:10px;margin-right:6px}
+.pill.pwa{background:#dbeafe;color:#1d4ed8}
+.pill.browser{background:#fef3c7;color:#92400e}
+</style>
+</head>
+<body>
+
+<h1>🎤 Spracheingabe-Test</h1>
+<div class="sub">Prüft, ob Speech-to-Text auf diesem Gerät funktioniert</div>
+
+<div class="card">
+  <div id="mode-pill"></div>
+  <div id="support-status" class="status info">Prüfe Unterstützung …</div>
+</div>
+
+<div class="card">
+  <label style="font-size:12px;font-weight:700;color:#64748b">Sprache</label>
+  <select id="lang">
+    <option value="it-IT">Italienisch (it-IT)</option>
+    <option value="en-US">Englisch (en-US)</option>
+    <option value="de-DE">Deutsch (de-DE)</option>
+  </select>
+  <button class="btn-mic" id="btn-mic" onclick="toggleListen()">🎤 Aufnahme starten</button>
+  <div class="transcript" id="transcript">–</div>
+</div>
+
+<div class="card">
+  <div style="font-size:12px;font-weight:700;color:#64748b;margin-bottom:6px">Ereignis-Log (für Diagnose)</div>
+  <div class="log" id="log">Bereit.</div>
+</div>
+
+<script>
+const isStandalone = window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches;
+document.getElementById('mode-pill').innerHTML = isStandalone
+  ? '<span class="pill pwa">Läuft als installierte App (Home-Bildschirm)</span>'
+  : '<span class="pill browser">Läuft im Safari-Tab (nicht installiert)</span>';
+
+function log(msg) {
+  const el = document.getElementById('log');
+  const time = new Date().toLocaleTimeString();
+  el.textContent = `[${time}] ${msg}\n` + el.textContent;
+}
+
+const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition;
+const statusEl = document.getElementById('support-status');
+const btn = document.getElementById('btn-mic');
+
+if (!SpeechRecognitionAPI) {
+  statusEl.textContent = '❌ Nicht unterstützt — dieser Browser/Modus kennt keine Spracherkennung';
+  statusEl.className = 'status bad';
+  btn.disabled = true;
+  log('window.SpeechRecognition und window.webkitSpeechRecognition sind beide undefined.');
+} else {
+  statusEl.textContent = '✓ API vorhanden — Test mit Mikrofon-Button starten';
+  statusEl.className = 'status ok';
+  log('SpeechRecognition API gefunden: ' + (window.SpeechRecognition ? 'Standard' : 'webkit-Prefix'));
+}
+
+let recognition = null;
+let listening = false;
+
+function toggleListen() {
+  if (listening) { recognition.stop(); return; }
+
+  recognition = new SpeechRecognitionAPI();
+  recognition.lang = document.getElementById('lang').value;
+  recognition.interimResults = true;
+  recognition.maxAlternatives = 3;
+
+  recognition.onstart = () => {
+    listening = true;
+    btn.textContent = '⏹ Stoppen (höre zu …)';
+    btn.classList.add('listening');
+    document.getElementById('transcript').textContent = '…';
+    log('Aufnahme gestartet (Sprache: ' + recognition.lang + ')');
+  };
+
+  recognition.onresult = (e) => {
+    let text = '';
+    for (let i = 0; i < e.results.length; i++) {
+      text += e.results[i][0].transcript;
+    }
+    document.getElementById('transcript').textContent = text || '–';
+    if (e.results[0] && e.results[0].isFinal) {
+      const alts = Array.from(e.results[0]).map(a => `"${a.transcript}" (${Math.round(a.confidence*100)}%)`).join(', ');
+      log('Ergebnis final: ' + alts);
+    }
+  };
+
+  recognition.onerror = (e) => {
+    log('FEHLER: ' + e.error + (e.message ? ' — ' + e.message : ''));
+    statusEl.textContent = '❌ Fehler: ' + e.error;
+    statusEl.className = 'status bad';
+  };
+
+  recognition.onend = () => {
+    listening = false;
+    btn.textContent = '🎤 Aufnahme starten';
+    btn.classList.remove('listening');
+    log('Aufnahme beendet.');
+  };
+
+  try {
+    recognition.start();
+  } catch (err) {
+    log('EXCEPTION beim Start: ' + err.message);
+  }
+}
+</script>
+</body>
+</html>
