@@ -1,4 +1,4 @@
-const CACHE = 'vokabelen-v21';
+const CACHE = 'vokabelen-v22';
 const ASSETS = ['./', './index.html', './manifest.json', './static/icon-192.png', './static/icon-512.png', './static/fonts/designer.woff2'];
 
 self.addEventListener('install', e => {
