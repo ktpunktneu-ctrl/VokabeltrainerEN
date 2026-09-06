@@ -1,5 +1,5 @@
-const CACHE = 'vokabelen-v24';
-const ASSETS = ['./', './index.html', './manifest.json', './static/icon-192.png', './static/icon-512.png', './static/fonts/designer.woff2'];
+const CACHE = 'vokabelen-v25';
+const ASSETS = ['./', './index.html', './manifest.json', './static/icon-192.png', './static/icon-512.png', './static/fonts/designer.woff2', './static/tesseract.min.js', './static/worker.min.js', './static/tesseract-core-lstm.wasm.js', './static/tesseract-core-lstm.wasm', './static/tessdata/deu.traineddata', './static/tessdata/eng.traineddata'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
